@@ -21,10 +21,10 @@ class LinuxWorkflow implements Workflow {
   bool get appliesToHostPlatform => platform.isLinux && featureFlags.isLinuxEnabled;
 
   @override
-  bool get canLaunchDevices => platform.isLinux && featureFlags.isLinuxEnabled;
+  bool get canLaunchDevices => (platform.isLinux || platform.isMacOS) && featureFlags.isLinuxEnabled;
 
   @override
-  bool get canListDevices => platform.isLinux && featureFlags.isLinuxEnabled;
+  bool get canListDevices => (platform.isLinux || platform.isMacOS) && featureFlags.isLinuxEnabled;
 
   @override
   bool get canListEmulators => false;
