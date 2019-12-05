@@ -35,6 +35,7 @@ class ScrollBehavior {
     // _MaterialScrollBehavior as well.
     switch (getPlatform(context)) {
       case TargetPlatform.iOS:
+      case TargetPlatform.raspi:
         return child;
       case TargetPlatform.android:
       case TargetPlatform.fuchsia:
@@ -54,6 +55,7 @@ class ScrollBehavior {
   ScrollPhysics getScrollPhysics(BuildContext context) {
     switch (getPlatform(context)) {
       case TargetPlatform.iOS:
+      case TargetPlatform.raspi:
         return const BouncingScrollPhysics();
       case TargetPlatform.android:
       case TargetPlatform.fuchsia:

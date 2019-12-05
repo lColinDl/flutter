@@ -111,6 +111,7 @@ class Typography extends Diagnosticable {
         break;
       case TargetPlatform.android:
       case TargetPlatform.fuchsia:
+      case TargetPlatform.raspi:
         black ??= blackMountainView;
         white ??= whiteMountainView;
     }

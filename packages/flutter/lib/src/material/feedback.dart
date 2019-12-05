@@ -95,6 +95,7 @@ class Feedback {
     switch (_platform(context)) {
       case TargetPlatform.android:
       case TargetPlatform.fuchsia:
+      case TargetPlatform.raspi:
         return SystemSound.play(SystemSoundType.click);
       default:
         return Future<void>.value();
@@ -134,6 +135,7 @@ class Feedback {
     switch (_platform(context)) {
       case TargetPlatform.android:
       case TargetPlatform.fuchsia:
+      case TargetPlatform.raspi:
         return HapticFeedback.vibrate();
       default:
         return Future<void>.value();

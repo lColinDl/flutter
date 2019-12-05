@@ -166,6 +166,9 @@ abstract class BindingBase {
               case 'fuchsia':
                 debugDefaultTargetPlatformOverride = TargetPlatform.fuchsia;
                 break;
+              case 'linux':
+                debugDefaultTargetPlatformOverride = TargetPlatform.raspi;
+                break;
               case 'default':
               default:
                 debugDefaultTargetPlatformOverride = null;

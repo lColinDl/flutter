@@ -77,6 +77,7 @@ class _SelectableTextSelectionGestureDetectorBuilder extends TextSelectionGestur
           break;
         case TargetPlatform.android:
         case TargetPlatform.fuchsia:
+        case TargetPlatform.raspi:
           renderEditable.selectWordsInRange(
             from: details.globalPosition - details.offsetFromOrigin,
             to: details.globalPosition,
@@ -97,6 +98,7 @@ class _SelectableTextSelectionGestureDetectorBuilder extends TextSelectionGestur
           break;
         case TargetPlatform.android:
         case TargetPlatform.fuchsia:
+        case TargetPlatform.raspi:
           renderEditable.selectPosition(cause: SelectionChangedCause.tap);
           break;
       }
@@ -117,6 +119,7 @@ class _SelectableTextSelectionGestureDetectorBuilder extends TextSelectionGestur
           break;
         case TargetPlatform.android:
         case TargetPlatform.fuchsia:
+        case TargetPlatform.raspi:
           renderEditable.selectWord(cause: SelectionChangedCause.longPress);
           Feedback.forLongPress(_state.context);
           break;
@@ -468,6 +471,7 @@ class _SelectableTextState extends State<SelectableText> with AutomaticKeepAlive
         return;
       case TargetPlatform.android:
       case TargetPlatform.fuchsia:
+      case TargetPlatform.raspi:
       // Do nothing.
     }
   }
@@ -540,6 +544,7 @@ class _SelectableTextState extends State<SelectableText> with AutomaticKeepAlive
 
       case TargetPlatform.android:
       case TargetPlatform.fuchsia:
+      case TargetPlatform.raspi:
         forcePressEnabled = false;
         textSelectionControls = materialTextSelectionControls;
         paintCursorAboveText = false;

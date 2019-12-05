@@ -15,6 +15,8 @@ platform.TargetPlatform get defaultTargetPlatform {
     result = platform.TargetPlatform.android;
   } else if (Platform.isFuchsia) {
     result = platform.TargetPlatform.fuchsia;
+  } else if (Platform.isLinux) {
+    result = platform.TargetPlatform.raspi;
   }
   assert(() {
     if (Platform.environment.containsKey('FLUTTER_TEST'))

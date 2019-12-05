@@ -47,6 +47,8 @@ enum TargetPlatform {
 
   /// iOS: <http://www.apple.com/ios/>
   iOS,
+
+  raspi,
 }
 
 /// Override the [defaultTargetPlatform].

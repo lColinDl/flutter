@@ -181,6 +181,7 @@ class Drawer extends StatelessWidget {
         break;
       case TargetPlatform.android:
       case TargetPlatform.fuchsia:
+      case TargetPlatform.raspi:
         label = semanticLabel ?? MaterialLocalizations.of(context)?.drawerLabel;
     }
     return Semantics(

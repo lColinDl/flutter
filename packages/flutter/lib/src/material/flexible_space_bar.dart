@@ -237,6 +237,7 @@ class _FlexibleSpaceBarState extends State<FlexibleSpaceBar> {
     switch (theme.platform) {
       case TargetPlatform.android:
       case TargetPlatform.fuchsia:
+      case TargetPlatform.raspi:
         return false;
       case TargetPlatform.iOS:
         return true;
@@ -345,6 +346,7 @@ class _FlexibleSpaceBarState extends State<FlexibleSpaceBar> {
               break;
             case TargetPlatform.fuchsia:
             case TargetPlatform.android:
+            case TargetPlatform.raspi:
               title = Semantics(
                 namesRoute: true,
                 child: widget.title,

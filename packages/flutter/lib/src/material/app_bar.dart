@@ -391,6 +391,7 @@ class AppBar extends StatefulWidget implements PreferredSizeWidget {
     switch (theme.platform) {
       case TargetPlatform.android:
       case TargetPlatform.fuchsia:
+      case TargetPlatform.raspi:
         return false;
       case TargetPlatform.iOS:
         return actions == null || actions.length < 2;
@@ -480,6 +481,7 @@ class _AppBarState extends State<AppBar> {
       switch (theme.platform) {
         case TargetPlatform.android:
         case TargetPlatform.fuchsia:
+        case TargetPlatform.raspi:
           namesRoute = true;
           break;
         case TargetPlatform.iOS:

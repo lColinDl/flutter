@@ -902,6 +902,7 @@ class _RenderRangeSlider extends RenderBox with RelayoutWhenSystemFontsChangeMix
         return 0.1;
       case TargetPlatform.android:
       case TargetPlatform.fuchsia:
+      case TargetPlatform.raspi:
       default:
         // Matches Android implementation of material slider.
         return 0.05;

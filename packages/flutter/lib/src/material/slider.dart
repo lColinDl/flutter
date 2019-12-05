@@ -500,6 +500,7 @@ class _SliderState extends State<Slider> with TickerProviderStateMixin {
         switch (theme.platform) {
           case TargetPlatform.android:
           case TargetPlatform.fuchsia:
+          case TargetPlatform.raspi:
             return _buildMaterialSlider(context);
           case TargetPlatform.iOS:
             return _buildCupertinoSlider(context);
@@ -892,6 +893,7 @@ class _RenderSlider extends RenderBox with RelayoutWhenSystemFontsChangeMixin {
         return 0.1;
       case TargetPlatform.android:
       case TargetPlatform.fuchsia:
+      case TargetPlatform.raspi:
       default:
       // Matches Android implementation of material slider.
         return 0.05;
